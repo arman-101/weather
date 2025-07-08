@@ -10,7 +10,7 @@ function listenUnit() {
       unit = "uk";
       unitBtn.innerText = "°C";
     }
-    document.querySelector(".content-div").innerHTML = "";
+    // document.querySelector(".content-div").innerHTML = "";
   });
 }
 
