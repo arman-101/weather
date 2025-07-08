@@ -23,6 +23,8 @@ function listenLocation() {
 
     const queryValue = document.getElementById("location-input");
     const queryInput = queryValue.value.trim();
+    lastLocation = queryInput;
+
 
     if (!queryInput || queryInput === "") {
       const errorH1 = document.querySelector(".no-result-title");
