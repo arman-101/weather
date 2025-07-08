@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --bg-color: #ffb4b4;
+  --border-color: #e14434;
+  --font-color: #5eabd6;
+  --font-bg-color: #fefbc7;
+  --border: 5px solid white;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+/* header */
+
+.header-div {
+  background-color: var(--font-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.8rem 5rem;
+  border-bottom: var(--border);
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.header-title {
+  color: var(--font-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header-right {
+  display: flex;
+}
+
+#location-unit {
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--font-color);
+  border-radius: 2px;
+  background-color: white;
+  cursor: pointer;
+  color: rgb(99, 99, 99);
+  transition: 0.2s ease-in-out;
+  margin-right: 5px;
+}
+#location-unit:hover {
+  background-color: var(--font-bg-color);
+}
+
+#location-input {
+  width: 15rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border: 2px solid var(--font-color);
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+#location-button {
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--font-color);
+  border-radius: 2px;
+  background-color: white;
+  cursor: pointer;
+  color: rgb(99, 99, 99);
+  transition: 0.2s ease-in-out;
+}
+#location-button:hover {
+  background-color: var(--font-bg-color);
+}
+
+/* content */
+
+.content-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 1rem;
+}
+
+.no-result-title {
+  color: var(--font-bg-color);
+  display: flex;
+  justify-self: center;
+  margin-top: 2.5rem;
+}
+.hidden {
+  display: none;
+}
+
+.card {
+  background-color: var(--font-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--font-color);
+  font-size: 1.2rem;
+  border: 5px solid var(--border-color);
+  border-radius: 5px;
+  padding: 2rem 5rem;
+}
+.location-p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
