@@ -1,18 +1,20 @@
 let unit = "uk";
+let lastLocation = "";
 
 const unitBtn = document.getElementById("location-unit");
 function listenUnit() {
-  unitBtn.addEventListener("click", () => {
-    if (unit === "uk") {
-      unit = "us";
-      unitBtn.innerText = "°F";
-    } else {
-      unit = "uk";
-      unitBtn.innerText = "°C";
+  unitBtn.addEventListener("click", async () => {
+    unit = unit === "uk" ? "us" : "uk";
+    unitBtn.innerText = unit === "uk" ? "°C" : "°F";
+
+    if (lastLocation) {
+      document.querySelector(".content-div").innerHTML = "";
+      const result = await fetchData(lastLocation, unit);
+      if (result) displayData(result);
     }
-    // document.querySelector(".content-div").innerHTML = "";
   });
 }
+
 
 const formBtn = document.querySelector("form");
 function listenLocation() {
